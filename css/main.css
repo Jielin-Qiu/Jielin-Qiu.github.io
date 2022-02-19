@@ -1,0 +1,89 @@
+a {
+    color: #0055aa;
+    text-decoration:none;
+}
+
+a:focus, a:hover {
+    color: #e37222; /*#f7b733;*/ /*f09228;*/
+    text-decoration:none;
+}
+
+body,td,th,tr,p,a {
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 15px;
+}
+
+strong {
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 15px;
+}
+
+heading {
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 22px;
+}
+
+papertitle {
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+name {
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 42px;
+}
+
+li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.one {
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.two {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+}
+
+.fade {
+    transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+}
+
+span.venue {
+    color: #0055aa;
+    font-weight: bold;
+}
+
+span.highlight {
+    color: #BB2222;
+    font-weight: bold;
+}
+
+@media screen {
+
+    /* Text contrast */
+    html {
+      text-shadow: 0 0 0 !important;
+    }
+
+    /* Full screen */
+    *:-webkit-full-screen, *:-webkit-full-screen * {
+      -webkit-filter: none !important;
+    }
+
+    /* Page background */
+    html {
+      background: rgb(255,255,255) !important;
+    }
+
+}
