@@ -64,7 +64,8 @@
 }
 
 a {
-  color: #196CD1;
+  /* color: #196CD1; */
+  color: #2470ce;
   text-decoration: none;
 }
 
@@ -72,18 +73,20 @@ a:focus,
 a:hover,
 author:focus,
 author:hover {
-  color: #B908C5;
+  /* color: #B908C5; */
+  text-decoration: underline;
   }
 
 body,
 td,
 th,
+li,
 tr{
   /* font-family: 'Lato', Verdana, Arial, sans-serif; */
   font-family: 'Lato', Arial, sans-serif;
   font-size: 16px;
   color: #404040;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 p{
@@ -91,7 +94,7 @@ p{
   font-size: 16px;
   color: #404040;
   margin:0;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 papertext,
@@ -99,7 +102,7 @@ author{
   font-family: 'Lato', Arial, sans-serif;
   font-size: 16px;
   color: #777777;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 a{
@@ -125,7 +128,7 @@ papertitle {
   font-size: 16px;
   font-weight: 700;
   color: #333333;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 name {
@@ -162,21 +165,22 @@ span.highlight {
 
 h2{
   font-family: 'Lato', Arial, sans-serif;
-  font-size: 24px;
+  font-size: 17px;
   margin:0;
+  line-height: 3;
   color: #333333;
 }
 
 
 h3{
   font-family: 'Lato', Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #333333;
 }
 
 h4{
   font-family: 'Lato', Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   margin:0;
   color: #333333;
 }
