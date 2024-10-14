@@ -8,32 +8,31 @@ a:focus, a:hover {
     text-decoration:none;
 }
 
-body, td, th, tr, p, a {
-    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+body,td,th,tr,p,a {
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 16px;
 }
 
 strong {
-    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
-    font-size: 16px;
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 	16px;
 }
 
 heading {
-    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 22px;
 }
 
 papertitle {
-    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 16px;
     font-weight: 700;
 }
 
 name {
-    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    font-family: "TeXGyrePagella", "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 42px;
 }
-
 
 li:not(:last-child) {
     margin-bottom: 5px;
