@@ -208,18 +208,16 @@ ul {
 }
 
 .topic-menu {
-    margin: 10px 0;
-    font-size: 14px;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 5px;
+    margin: 5px 0;
+    font-size: 16px;
+    padding: 0;
+    line-height: 1.4;
 }
 
 .topic-menu a {
     color: #2470ce;
     text-decoration: none;
     cursor: pointer;
-    margin: 0 5px;
 }
 
 .topic-menu a:hover {

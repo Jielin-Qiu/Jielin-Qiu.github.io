@@ -55,6 +55,8 @@ function scrollToPubs() {
 function filterSelected() {
     updateActiveFilter('filter-selected');
     document.getElementById('topic-menu').style.display = 'none';
+    const note = document.getElementById('contribution-note');
+    if (note) note.style.display = 'block';
     clearContainer();
     
     const container = document.getElementById('publications-container');
@@ -69,6 +71,8 @@ function filterSelected() {
 function filterByDate() {
     updateActiveFilter('filter-date');
     document.getElementById('topic-menu').style.display = 'none';
+    const note = document.getElementById('contribution-note');
+    if (note) note.style.display = 'block';
     clearContainer();
     
     const container = document.getElementById('publications-container');
@@ -96,6 +100,8 @@ function filterByTopicMenu() {
     updateActiveFilter('filter-topic');
     const topicMenu = document.getElementById('topic-menu');
     topicMenu.style.display = 'block';
+    const note = document.getElementById('contribution-note');
+    if (note) note.style.display = 'none';
     
     // Reset topic menu active states
     document.querySelectorAll('.topic-menu a').forEach(a => a.classList.remove('active'));
