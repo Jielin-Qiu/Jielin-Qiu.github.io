@@ -180,10 +180,28 @@
     <td>
         <h2> Selected Publications </h2>
         <hr>
-			  <p>* marked as equal contribution</p>
 
+        <p class="publication-filter">
+            (
+            <a id="filter-selected" href="javascript:void(0)" onclick="filterSelected()" class="active">show selected</a> /
+            <a id="filter-date" href="javascript:void(0)" onclick="filterByDate()">show all by date</a> /
+            <a id="filter-topic" href="javascript:void(0)" onclick="filterByTopicMenu()">show all by topic</a>
+            )
+        </p>
 
-              <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <p id="topic-menu" class="topic-menu" style="display:none">
+            <strong>Topics:</strong>
+            <a href="javascript:void(0)" onclick="filterByTopic('Multimodal', event)">Multimodal</a> /
+            <a href="javascript:void(0)" onclick="filterByTopic('LLM Agent', event)">LLM Agent</a> /
+            <a href="javascript:void(0)" onclick="filterByTopic('Healthcare', event)">Healthcare</a> /
+            <a href="javascript:void(0)" onclick="filterByTopic('Robustness', event)">Robustness</a> /
+            <a href="javascript:void(0)" onclick="filterByTopic('Others', event)">Others</a>
+        </p>
+
+        <p style="margin-top:10px">* marked as equal contribution</p>
+
+        <div id="publications-container">
+              <table class="pub-item" data-year="2025" data-topic="Multimodal" data-selected="true" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
                 <tr>
                     <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                         <div class="image-container">
@@ -214,7 +232,7 @@
             </table>
             <br>
 
-              <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+              <table class="pub-item" data-year="2024" data-topic="Robustness" data-selected="true" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
                 <tr>
                     <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                         <div class="image-container">
@@ -244,7 +262,7 @@
             <br>
 
 
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2024" data-topic="Multimodal" data-selected="true" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -276,7 +294,7 @@
         </table>
         <br>
 
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2024" data-topic="Multimodal" data-selected="true" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -304,7 +322,7 @@
         <br>
 
 
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2024" data-topic="Multimodal" data-selected="true" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -341,7 +359,7 @@
         <br>
 
 
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2024" data-topic="Robustness" data-selected="true" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -376,7 +394,7 @@
 
 
 
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2024" data-topic="Others" data-selected="true" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -408,7 +426,7 @@
 
 
 
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2023" data-topic="Others" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -442,7 +460,7 @@
 
 
 
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2023" data-topic="Others" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -473,7 +491,7 @@
         <br>
 
 
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2023" data-topic="Healthcare" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -505,7 +523,7 @@
         </table>
         <br>
 
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2023" data-topic="Healthcare" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -539,7 +557,7 @@
         </table>
         <br>
 
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2023" data-topic="Healthcare" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -569,7 +587,7 @@
         </table>
         <br>
 
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2023" data-topic="Healthcare" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -598,7 +616,7 @@
         </table>
         <br>
 		
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2023" data-topic="Multimodal" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -627,7 +645,7 @@
         <br>
 		
 		
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2023" data-topic="Robustness" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -656,7 +674,7 @@
         </table>
         <br>
 		
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2023" data-topic="Multimodal" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -687,7 +705,7 @@
 
 
 
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2022" data-topic="Robustness" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -719,7 +737,7 @@
 		
 
 
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2022" data-topic="Healthcare" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -749,7 +767,7 @@
         <br>
 		
 		
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2023" data-topic="Robustness" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -784,7 +802,7 @@
 		
 
 		
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2022" data-topic="Healthcare" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -812,7 +830,7 @@
         </table>
         <br>
 		
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2021" data-topic="Robustness" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -838,7 +856,7 @@
         </table>
         <br>
 		
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2019" data-topic="Others" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -862,7 +880,7 @@
         </table>
         <br>
 		
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2019" data-topic="Others" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -889,7 +907,7 @@
         </table>
         <br>
 		
-        <table width="900" align="center" border="0" cellspacing="0" cellpadding="0">
+        <table class="pub-item" data-year="2018" data-topic="Others" data-selected="false" width="900" align="center" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td style="width:35%; vertical-align:middle; padding-right: 20px;">
                     <div class="image-container">
@@ -916,6 +934,7 @@
 		
 
 
+        </div>
 
     <table width="900" border="0" align="center" cellspacing="0" cellpadding="0">
         <tr>

@@ -188,3 +188,66 @@ h4{
 ul {
   margin: 0;
 }
+
+/* Filtering styles */
+.publication-filter {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.publication-filter a {
+    color: #2470ce;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.publication-filter a.active {
+    font-weight: bold;
+    color: #333333;
+    text-decoration: underline;
+}
+
+.topic-menu {
+    margin: 10px 0;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.topic-menu a {
+    color: #2470ce;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.topic-menu a:hover {
+    text-decoration: underline;
+}
+
+.topic-menu a.active {
+    font-weight: bold;
+    color: #333333;
+}
+
+.year-header {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.topic-header {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-transform: capitalize;
+}
