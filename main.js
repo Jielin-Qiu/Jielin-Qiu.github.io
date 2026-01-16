@@ -101,7 +101,7 @@ function filterByTopicMenu() {
     const topicMenu = document.getElementById('topic-menu');
     topicMenu.style.display = 'block';
     const note = document.getElementById('contribution-note');
-    if (note) note.style.display = 'none';
+    if (note) note.style.display = 'block';
     
     // Reset topic menu active states
     document.querySelectorAll('.topic-menu a').forEach(a => a.classList.remove('active'));
