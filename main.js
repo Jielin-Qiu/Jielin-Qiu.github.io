@@ -21,7 +21,9 @@ function initFiltering() {
     const container = document.getElementById('publications-container');
     if (container && allPubs.length === 0) {
         allPubs = Array.from(container.querySelectorAll('.pub-item'));
-        // Start with selected papers only
+    }
+    // Always run filterSelected to ensure UI is in correct state
+    if (allPubs.length > 0) {
         filterSelected();
     }
 }
