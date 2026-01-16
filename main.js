@@ -1,28 +1,36 @@
 var mobileMenuBtn = document.querySelector("#mobile-menu-btn");
 var mobileMenu = document.querySelector(".mobile-menu");
 
-mobileMenuBtn.addEventListener("click", () => {
-  if (mobileMenu.style.display === "none") {
-    mobileMenu.style.display = "flex";
-    mobileMenuBtn.innerHTML = "Close";
-  } 
-  else {
-    mobileMenu.style.display = "none";
-    mobileMenuBtn.innerHTML = "Menu";
-  }
-});
+if (mobileMenuBtn && mobileMenu) {
+  mobileMenuBtn.addEventListener("click", () => {
+    if (mobileMenu.style.display === "none") {
+      mobileMenu.style.display = "flex";
+      mobileMenuBtn.innerHTML = "Close";
+    } 
+    else {
+      mobileMenu.style.display = "none";
+      mobileMenuBtn.innerHTML = "Menu";
+    }
+  });
+}
 
 // Publication Filtering Logic
 let allPubs = [];
 
-document.addEventListener("DOMContentLoaded", () => {
+function initFiltering() {
     const container = document.getElementById('publications-container');
-    if (container) {
+    if (container && allPubs.length === 0) {
         allPubs = Array.from(container.querySelectorAll('.pub-item'));
         // Start with selected papers only
         filterSelected();
     }
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener("DOMContentLoaded", initFiltering);
+} else {
+    initFiltering();
+}
 
 function clearContainer() {
     const container = document.getElementById('publications-container');
@@ -37,6 +45,13 @@ function updateActiveFilter(id) {
     }
 }
 
+function scrollToPubs() {
+    const container = document.getElementById('publications-container');
+    if (container) {
+        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
 function filterSelected() {
     updateActiveFilter('filter-selected');
     document.getElementById('topic-menu').style.display = 'none';
@@ -46,6 +61,7 @@ function filterSelected() {
     allPubs.forEach(pub => {
         if (pub.getAttribute('data-selected') === 'true') {
             container.appendChild(pub.cloneNode(true));
+            container.appendChild(document.createElement('br'));
         }
     });
 }
@@ -72,6 +88,7 @@ function filterByDate() {
             container.appendChild(yearHeader);
         }
         container.appendChild(pub.cloneNode(true));
+        container.appendChild(document.createElement('br'));
     });
 }
 
@@ -79,6 +96,9 @@ function filterByTopicMenu() {
     updateActiveFilter('filter-topic');
     const topicMenu = document.getElementById('topic-menu');
     topicMenu.style.display = 'block';
+    
+    // Reset topic menu active states
+    document.querySelectorAll('.topic-menu a').forEach(a => a.classList.remove('active'));
     
     // Default to show all grouped by topic
     clearContainer();
@@ -95,6 +115,7 @@ function filterByTopicMenu() {
             
             topicPubs.forEach(pub => {
                 container.appendChild(pub.cloneNode(true));
+                container.appendChild(document.createElement('br'));
             });
         }
     });
@@ -124,6 +145,7 @@ function filterByTopic(topic, event) {
     } else {
         topicPubs.forEach(pub => {
             container.appendChild(pub.cloneNode(true));
+            container.appendChild(document.createElement('br'));
         });
     }
 }
