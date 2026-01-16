@@ -183,26 +183,33 @@
     <table width="900" border="0" align="center" cellspacing="0" cellpadding="0">
     <tr>
     <td>
-        <h2> Selected Publications </h2>
-        <hr>
+        <div style="display: flex; align-items: baseline; margin-bottom: 5px;">
+            <h2 style="margin: 0;"> Publications </h2>
+            <span class="publication-filter" style="margin-left: 10px; font-size: 15px;">
+                (
+                <a id="filter-selected" href="javascript:void(0)" onclick="filterSelected()" class="active">show selected</a> /
+                <a id="filter-date" href="javascript:void(0)" onclick="filterByDate()">show all by date</a> /
+                <a id="filter-topic" href="javascript:void(0)" onclick="filterByTopicMenu()">show all by topic</a>
+                )
+            </span>
+        </div>
+        <hr style="margin: 0 0 10px 0;">
 
-        <p class="publication-filter">
-            (
-            <a id="filter-selected" href="javascript:void(0)" onclick="filterSelected()" class="active">show selected</a> /
-            <a id="filter-date" href="javascript:void(0)" onclick="filterByDate()">show all by date</a> /
-            <a id="filter-topic" href="javascript:void(0)" onclick="filterByTopicMenu()">show all by topic</a>
-            )
-        </p>
-
-        <p id="topic-menu" class="topic-menu">
-            Topics:
-            <a href="javascript:void(0)" onclick="filterByTopic('Multimodal', event)">Multimodal</a> /
-            <a href="javascript:void(0)" onclick="filterByTopic('LLM Agent', event)">LLM Agent</a> /
-            <a href="javascript:void(0)" onclick="filterByTopic('Healthcare', event)">Healthcare</a> /
-            <a href="javascript:void(0)" onclick="filterByTopic('Robustness', event)">Robustness</a> /
-            <a href="javascript:void(0)" onclick="filterByTopic('Others', event)">Others</a> /
-            (*: indicates equal contribution.)
-        </p>
+        <div id="topic-menu" class="topic-menu">
+            <p><strong>Topics:</strong>
+                <a href="javascript:void(0)" onclick="filterByTopic('Multimodal LLM', event)">Multimodal LLM</a> /
+                <a href="javascript:void(0)" onclick="filterByTopic('LLM Agent', event)">LLM Agent</a> /
+                <a href="javascript:void(0)" onclick="filterByTopic('Foundation Model', event)">Foundation Model</a>
+            </p>
+            <p><strong>Past topics:</strong>
+                <a href="javascript:void(0)" onclick="filterByTopic('Embodied AI', event)">Embodied AI</a> /
+                <a href="javascript:void(0)" onclick="filterByTopic('Healthcare', event)">Healthcare</a> /
+                <a href="javascript:void(0)" onclick="filterByTopic('Multimedia', event)">Multimedia</a> /
+                <a href="javascript:void(0)" onclick="filterByTopic('Robustness', event)">Robustness</a> /
+                <a href="javascript:void(0)" onclick="filterByTopic('Others', event)">Others</a> 
+                &nbsp; <span style="color: #888888; font-size: 14px;">(* / &dagger;: indicates equal contribution.)</span>
+            </p>
+        </div>
 
         <div id="publications-container">
               <table class="pub-item" data-year="2025" data-topic="LLM Agent" data-selected="true" width="900" align="center" border="0" cellspacing="0" cellpadding="0">

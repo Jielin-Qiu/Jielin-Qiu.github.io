@@ -208,14 +208,19 @@ ul {
 }
 
 .topic-menu {
-    margin: 5px 0;
+    margin: 5px 0 15px 0;
     font-size: 16px;
     padding: 0;
+}
+
+.topic-menu p {
+    margin: 4px 0;
     line-height: 1.4;
+    color: #333333;
 }
 
 .topic-menu a {
-    color: #2470ce;
+    color: #447733; /* Greenish color for topics as per image */
     text-decoration: none;
     cursor: pointer;
 }
@@ -227,6 +232,7 @@ ul {
 .topic-menu a.active {
     font-weight: bold;
     color: #333333;
+    text-decoration: underline;
 }
 
 .year-header {
