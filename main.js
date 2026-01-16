@@ -105,10 +105,13 @@ function filterByTopicMenu() {
     // Default to show all grouped by topic
     clearContainer();
     const container = document.getElementById('publications-container');
-    const topics = ["Multimodal", "LLM Agent", "Healthcare", "Robustness", "Others"];
+    const topics = ["Multimodal Foundation Models", "Agentic AI & LLM Systems", "Long-Context & Evaluation", "Embodied AI", "ML for Healthcare", "Robustness & Safety", "Others"];
     
     topics.forEach(topic => {
-        const topicPubs = allPubs.filter(pub => pub.getAttribute('data-topic') === topic);
+        const topicPubs = allPubs.filter(pub => {
+            const pubTopicAttr = pub.getAttribute('data-topic');
+            return pubTopicAttr && pubTopicAttr.split(',').map(s => s.trim()).includes(topic);
+        });
         if (topicPubs.length > 0) {
             const topicHeader = document.createElement('div');
             topicHeader.className = 'topic-header';
@@ -138,7 +141,10 @@ function filterByTopic(topic, event) {
     topicHeader.innerText = topic;
     container.appendChild(topicHeader);
     
-    const topicPubs = allPubs.filter(pub => pub.getAttribute('data-topic') === topic);
+    const topicPubs = allPubs.filter(pub => {
+        const pubTopicAttr = pub.getAttribute('data-topic');
+        return pubTopicAttr && pubTopicAttr.split(',').map(s => s.trim()).includes(topic);
+    });
     if (topicPubs.length === 0) {
         const noPubs = document.createElement('p');
         noPubs.innerText = 'No papers in this category yet.';
