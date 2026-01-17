@@ -99,18 +99,18 @@ span.highlight {
 
 h1 {
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0;
-  line-height: 1.2;
+  line-height: 2.2;
   color: #333333;
 }
 
 
 h2{
   font-size: 26px;
-  font-weight: 500;
+  font-weight: 600;
   margin:0;
-  line-height: 2.2;
+  line-height: 1.2;
   color: #333333;
 }
 
