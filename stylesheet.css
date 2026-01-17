@@ -98,9 +98,10 @@ span.highlight {
 }
 
 h2{
-  font-size: 17px;
+  font-size: 22px;
+  font-weight: 600;
   margin:0;
-  line-height: 3;
+  line-height: 2.2;
   color: #333333;
 }
 
